@@ -1,0 +1,37 @@
+[{"name" : "Codec is NLC or HAP",
+  "precondition" : "type == \"MOV\"",
+  "test" : "userData.videoCodecID in (\"hap1\",\"nclc\")",
+  "message" : "video codec must be HAP1 or NCLC",
+  "severity" : "Error"
+},
+{"name" : "WAV File is PCM",
+  "precondition" : "type == \"WAV\"",
+  "test" : "userData.audioFormat != \"PCM\"",
+  "message" : "Audio Format must be PCM",
+  "severity" : "Error"
+},
+{"name" : "WAV File Audio Sample Rate is 48k",
+  "precondition" : "type == \"WAV\"",
+  "test" : "userData.audioSamplingRate != \"48000\"",
+  "message" : "Audio Sample Rate must be 48k",
+  "severity" : "Error"
+},
+{"name" : "File must be WAV or MOV",
+  "precondition" : "true",
+  "test" : "type in (\"MOV\", \"WAV\")",
+  "message" : "File must be either MOV or WAV",
+  "severity" : "Error"
+},
+{"name" : "MOV audio must be SOWT codec",
+  "precondition" : "(type == \"MOV\") && (userData.numAudioTracks == 1)",
+  "test" : "userData.audioCodecID == \"sowt\")",
+  "message" : "MOV audio must be SOWT codec",
+  "severity" : "Error"
+},
+{"name" : "Framerate warning",
+  "precondition" : "(type == \"MOV\")",
+  "test" : "userData.videoFrameRate in (\"29.97\", \"29.970\"))",
+  "message" : "video framerate should be 29.97, but is not a requirement",
+  "severity" : "Warning"
+}
+]
