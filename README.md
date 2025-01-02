@@ -1,10 +1,10 @@
-# preflight2
+# Preflight
 
-An Electron application with Svelte
+Preflight is an application for the quality control of media files before they are moved to media server playback systems.  Users create "rules", which are applied against each file, and the results reported.  End-users can also write "user functions", to generate additional data to be proofed above-and-beyond the information available in MediaInfo.  For example, a user-written script could split a name into sections based on a naming convention, and then those naming conventions checked in a rule.
 
-## Recommended IDE Setup
+Look in "src/main/rules.json" and "src/main/showspecific.js" for the format of rules and user functions.  To update the app, currently you can drop a ".json" file onto the dropzone of the checker to update the rules, and a ".js" file to update the user functions.  
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+
 
 ## Project Setup
 
