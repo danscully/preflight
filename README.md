@@ -6,11 +6,13 @@ Look in "src/main/rules.json" and "src/main/showspecific.js" for the format of r
 
 ### Rules Setup
 Rules have the following properties:
-"name" - a user-convenience name.  Not used by the app.
-"precondition" - a test that is run to see if the rule should be applied.  If the precondition test fails, the rule is not applied to the file
-"test" - the test to run against the file.  Results are reported in the app.
-"message" - the error message to be shown to the user if the test fails.
-"severity" - the severity of the error.  "Error", "Warning", and "Info" are currently supported, and affect how the error is shown in the UI
+| property | description |
+| -------- | ----------- |
+| "name" | a user-convenience name.  Not used by the app. |
+| "precondition" | a test that is run to see if the rule should be applied.  If the precondition test fails, the rule is not applied to the file|
+| "test" | the test to run against the file.  Results are reported in the app|
+| "message" | the error message to be shown to the user if the test fails|
+| "severity" | the severity of the error.  "Error", "Warning", and "Info" are currently supported, and affect how the error is shown in the UI|
 
 Rules are evaluated using the Filtrex.js library.  You can see more about the syntax and operators for tests at https://github.com/cshaa/filtrex.
 
