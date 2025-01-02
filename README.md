@@ -18,6 +18,8 @@ Rules are evaluated using the Filtrex.js library.  You can see more about the sy
 
 One known "gotcha".  When supplying string values in rules, you must escape the quotation marks like: type == \"MOV\".  Filtrex (and json) only support double quotation marks.
 
+<img src="docs/Screenshot.png" align="right" width="500px" />
+
 ## Project Setup
 
 ### Install
